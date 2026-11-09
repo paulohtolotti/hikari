@@ -49,6 +49,8 @@ include = ["app*"]
 
 [tool.pyright]
 include = ["app"]
-exclude = [".venv", "**/__pycache__"]
+exclude = [".venv", "**/__pycache__", "alembic/**"]
 reportMissingImports = "error"
 typeCheckingMode = "standard"
+venvPath = "."
+venv = ".venv"
