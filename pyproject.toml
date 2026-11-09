@@ -11,6 +11,7 @@ authors = [
 requires-python = ">=3.14"
 
 dependencies = [
+    "aiosqlite>=0.22.1",
     "alembic>=1.20.1",
     "asyncpg>=0.32.0",
     "fastapi>=0.162.2",
@@ -45,3 +46,9 @@ pythonpath = ["."]
 
 [tool.setuptools.packages.find]
 include = ["app*"]
+
+[tool.pyright]
+include = ["app"]
+exclude = [".venv", "**/__pycache__"]
+reportMissingImports = "error"
+typeCheckingMode = "standard"
