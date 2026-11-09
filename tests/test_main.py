@@ -4,13 +4,12 @@ from app.main import app
 
 client = TestClient(app)
 
+
 def test_root():
     resp = client.get("/")
     assert resp.status_code == 200
-    assert resp.json() == {
-        "status": "running & up",
-        "message": "hikari hi"
-    }
+    assert resp.json() == {"status": "running & up", "message": "hikari hi"}
+
 
 def test_health():
     resp = client.get("/health")
